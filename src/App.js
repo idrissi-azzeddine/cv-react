@@ -1,16 +1,27 @@
 import React from 'react';
-import { MDBBtn, MDBContainer } from 'mdb-react-ui-kit';
 import Header from './Header';
 import Sect from './Sect';
+import Cv from './Cv';
+import { Provider } from 'react-redux';
+import store from './store';
+import { MDBContainer } from 'mdb-react-ui-kit';
+import Loading from './Loading';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'; 
+
 
 function App() {
   return (
-    <div>
+    <Provider store={store}>
       <Header />
       <MDBContainer className='mt-5 mb-5'>
-        <Sect />
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Sect />} />
+            <Route path='/cv' element={<Cv />} />
+          </Routes>
+        </BrowserRouter>
       </MDBContainer>
-    </div>
+    </Provider>
   );
 }
 
