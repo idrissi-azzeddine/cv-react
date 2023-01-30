@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { MDBContainer, MDBNavbar, MDBNavbarBrand, MDBNavbarToggler, MDBIcon, MDBNavbarNav, MDBNavbarItem, MDBNavbarLink, MDBCollapse } from 'mdb-react-ui-kit';
 
+
 function Header() {
   const [showBasic, setShowBasic] = useState(false);
-
   return (
-    <MDBNavbar expand='lg' light bgColor='light' fixed>
+    <MDBNavbar expand='lg' light className='pr' bgColor='light' fixed>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#' className='ms-3'> Mon cv </MDBNavbarBrand>
+        <MDBNavbarBrand href='/' className='ms-3'> Mon cv </MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
@@ -22,7 +22,7 @@ function Header() {
           <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
             
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'></MDBNavbarLink>
+              <MDBNavbarLink href='/'></MDBNavbarLink>
             </MDBNavbarItem>
 
             <MDBNavbarItem>

@@ -5,7 +5,6 @@ import Cv from './Cv';
 import { Provider } from 'react-redux';
 import store from './store';
 import { MDBContainer } from 'mdb-react-ui-kit';
-import Loading from './Loading';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'; 
 
 

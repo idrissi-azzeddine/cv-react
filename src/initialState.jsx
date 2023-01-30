@@ -15,7 +15,11 @@ const initialState = {
         année3: '',
         carrière3: '',
         parcour: '',
+        parcour2: '',
+        parcour3: '',
         annéep: '',
+        annéep2: '',
+        annéep3: '',
         compétence: '',
         photo: '',
         state: '',
@@ -23,7 +27,7 @@ const initialState = {
         francais: '',
         anglais: '',
         german: '',
-        adress: '',
+        adress: ''
         }
     ]
 }

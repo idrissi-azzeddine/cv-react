@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { monCv } from './action';
 import { useDispatch, useSelector } from 'react-redux';
 import { MDBInput, MDBBtn, MDBRow, MDBTextArea, MDBCol, MDBContainer, MDBFile, MDBSpinner } from 'mdb-react-ui-kit';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 export default function Sect() {
     const pro = useSelector((state) => state.profil);
@@ -80,10 +80,8 @@ const handleClick = (e) => {
         german: formValue.german,
         adress: formValue.adress
     }));
-    // navigation('/cv')
 }
 
-// console.log(formValue)
 console.log(pro)
 
 $(document).ready(function () {
@@ -98,14 +96,12 @@ $(document).ready(function () {
     var e = false;
     var r = true;
     var d = false;
-    $('.inbtn').focus(function () {
+    $('.inbtn').click(function () {
         cpt = cpt + 1;
         if (cpt > 1) {
             $('.drei').show();
         } else {
             $('.zwei').show();
-            $('.zwei').addClass('zwei')
-            $('.zwei').css('display', 'block')
         } if (cpt >= 2) {
             cpt = 0;
         }
@@ -158,7 +154,7 @@ $(document).ready(function () {
 
 return (
     <MDBContainer fluid>
-<MDBRow tag="form" className='g-3 aq'>
+<MDBRow tag="form"  className='g-3 aq'>
 
 
 
@@ -168,7 +164,7 @@ return (
 
 
     <MDBCol md="4">
-        <MDBInput value={formValue.fname} name='fname' onChange={handleChange} id='1' required
+        <MDBInput value={formValue.fname} name='fname' onChange={handleChange} id='1' required 
             label='First name' />
     </MDBCol>
     <MDBCol md="4">
@@ -212,7 +208,7 @@ return (
             label='Fix' />
     </MDBCol>
     <MDBCol md="4">
-        <MDBFile id='8' onChange={handleChange} value={formValue.photo} name='photo' />
+        <MDBFile id='8' type='file' onChange={handleChange} value={formValue.photo} name='photo' />
     </MDBCol>
 
 
@@ -251,7 +247,7 @@ return (
             label='carrière' />
     </MDBCol>
     <MDBCol size='1' className='bg-light d-flex align-items-center justify-content-center'>
-        <MDBBtn type='button' className='inbtn' >
+        <MDBBtn type='button' className='inbtn d-flex justify-content-center align-items-center' >
             <i className="fa-solid fa-plus"></i>
         </MDBBtn>
     </MDBCol>
@@ -263,7 +259,7 @@ return (
     </MDBCol>
     <MDBCol size='9' className='zwei'>
         <MDBInput value={formValue.carrière2} name='carrière2' className='zwei' onChange={handleChange} id='14' required 
-            label='' />
+            label='carrière' />
     </MDBCol>
     <MDBCol size='1' className='zwei'>
         
@@ -277,7 +273,7 @@ return (
     </MDBCol>
     <MDBCol size='9' className='drei'>
         <MDBInput value={formValue.carrière3} name='carrière3' className='drei' onChange={handleChange} id='16' required 
-            label='' />
+            label='carrière' />
     </MDBCol>
     <MDBCol size='1' className='drei' >
     
@@ -298,7 +294,7 @@ return (
             label='Parcours Scolaire' />
     </MDBCol>
     <MDBCol size='1' className='bg-light d-flex align-items-center justify-content-center'>
-        <MDBBtn type='button' className='inbtn2' >
+        <MDBBtn type='button' className='inbtn2  d-flex justify-content-center align-items-center'  >
             <i className="fa-solid fa-plus"></i>
         </MDBBtn>
     </MDBCol>
@@ -314,8 +310,8 @@ return (
             required label='Année' />
     </MDBCol>
     <MDBCol size='9' className='fier'>
-        <MDBInput value={formValue.parcour} name='parcour' className='fier' onChange={handleChange} id='20' required
-            label='' />
+        <MDBInput value={formValue.parcour2} name='parcour' className='fier' onChange={handleChange} id='20' required
+            label='Parcours Scolaire' />
     </MDBCol>
     <MDBCol size='1' className='fier'>
         
@@ -328,8 +324,8 @@ return (
             required label='Année' />
     </MDBCol>
     <MDBCol size='9' className='funf'>
-        <MDBInput value={formValue.parcour} name='parcour' className='funf' onChange={handleChange} id='22' required
-            label='' />
+        <MDBInput value={formValue.parcour3} name='parcour' className='funf' onChange={handleChange} id='22' required
+            label='Parcours Scolaire' />
     </MDBCol>
     <MDBCol size='1' className='funf'>
         
@@ -354,7 +350,7 @@ return (
             required label='Compétences' />
     </MDBCol>
     <MDBCol size='1' className='bg-light d-flex align-items-center justify-content-center'>
-        <MDBBtn type='button' className='inbtn'>
+        <MDBBtn type='button' className='inbtn  d-flex justify-content-center align-items-center' >
             <i className="fa-solid fa-plus"></i>
         </MDBBtn>
     </MDBCol>
