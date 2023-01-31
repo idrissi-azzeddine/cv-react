@@ -534,7 +534,7 @@ export default function Sect() {
           </MDBBtn>
         </MDBCol>
       </MDBRow>
-      <div className="aa d-flex justify-content-center w-100 h-100 align-items-center mt-5">
+      <div className="aa d-flex justify-content-center w-100 h-100 align-items-center mt-5 bg-danger">
         <MDBSpinner grow className="aa">
           <span className="aa visually-hidden">Loading...</span>
         </MDBSpinner>
