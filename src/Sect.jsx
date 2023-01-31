@@ -145,9 +145,9 @@ export default function Sect() {
     $(".as").click(function () {
       $(".aa").show();
       $(".aq").hide();
-      setTimeout(function () {
-        navigation("/cv");
-      }, 1000);
+      //   setTimeout(function () {
+      //     navigation("/cv");
+      //   }, 1000);
     });
     $(".zwei").keydown(function () {
       $(".zwei").show();
