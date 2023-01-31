@@ -134,7 +134,7 @@ $(document).ready(function () {
         $('.aq').hide();
         setTimeout(function() {
              navigation('/cv')
-           }, 1000); 
+           }, 3000); 
     })
     $('.zwei').keydown(function () { 
         $('.zwei').show();
