@@ -16,11 +16,11 @@ const Cv = () => {
     return (
         <div className='bg-light h-100 w-100 mt-5 pri container-fluid border-1 border-dark ' id="first">
             <Link to={href} >
-                <MDBBtn className='m-3 position-absolute top-0 start-0 btn btn-primary' id="print" color="light">
+                <MDBBtn className='m-2 position-absolute top-0 start-0 btn btn-primary pt-3' id="print" color="light">
                     <MDBIcon fas icon="arrow-left" /> Back
                 </MDBBtn>
             </Link>
-            <MDBBtn className='m-3 position-absolute top-0 end-0 fixed' id="print-button" color="primary">
+            <MDBBtn className='m-2 position-absolute top-0 end-0 fixed' id="print-button" color="primary">
                 <MDBIcon fas icon="arrow-down" />
             </MDBBtn>
             { pro1 && console.log("kayn") }
