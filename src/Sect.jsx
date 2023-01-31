@@ -100,7 +100,6 @@ export default function Sect() {
     $(".drei").hide();
     $(".fier").hide();
     $(".funf").hide();
-    $(".aa").hide();
     var cpt = 0;
     var cpt2 = 0;
     var z = 0;
@@ -138,16 +137,19 @@ export default function Sect() {
     $(".hi3").click(function () {
       $(".fier").hide();
     });
-    $(".hi4").click(function () {
+    $(".hi4").dblclick(function () {
       $(".funf").hide();
     });
-
+    $(".aa").hide();
     $(".as").click(function () {
-      $(".aa").show();
-      $(".aq").hide();
-      //   setTimeout(function () {
-      //     navigation("/cv");
-      //   }, 1000);
+      $(".as > span").html("valider..!");
+      $(".as").click(function () {
+        $(".aa").show();
+        $(".aq").hide();
+        setTimeout(function () {
+          navigation("/cv");
+        }, 1000);
+      });
     });
     $(".zwei").keydown(function () {
       $(".zwei").show();
@@ -529,12 +531,11 @@ export default function Sect() {
             onFocus={handleClick}
             id="existing-button"
           >
-            {" "}
-            Créer mon cv{" "}
+            <span>Créer mon Cv </span>
           </MDBBtn>
         </MDBCol>
       </MDBRow>
-      <div className="aa d-flex justify-content-center w-100 h-100 align-items-center mt-5 bg-danger">
+      <div className="aa d-flex justify-content-center w-100 h-100 align-items-center mt-5">
         <MDBSpinner grow className="aa">
           <span className="aa visually-hidden">Loading...</span>
         </MDBSpinner>
