@@ -100,7 +100,7 @@ export default function Sect() {
     $(".drei").hide();
     $(".fier").hide();
     $(".funf").hide();
-    $(".aa").hide();
+    $("#aa").hide();
     var cpt = 0;
     var cpt2 = 0;
     var z = 0;
@@ -143,7 +143,7 @@ export default function Sect() {
     });
 
     $(".as").click(function () {
-      $(".aa").show();
+      $("#aa").show();
       $(".aq").hide();
       setTimeout(function () {
         navigation("/cv");
@@ -534,9 +534,14 @@ export default function Sect() {
           </MDBBtn>
         </MDBCol>
       </MDBRow>
-      <div className="aa d-flex justify-content-center w-100 h-100 align-items-center mt-5 bg-danger">
-        <MDBSpinner grow className="aa">
-          <span className="aa visually-hidden">Loading...</span>
+      <div
+        className="d-flex justify-content-center w-100 h-100 align-items-center mt-5 bg-danger"
+        id="aa"
+      >
+        <MDBSpinner grow id="aa">
+          <span className="visually-hidden" id="aa">
+            Loading...
+          </span>
         </MDBSpinner>
       </div>
     </MDBContainer>
