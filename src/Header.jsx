@@ -7,7 +7,7 @@ function Header() {
   return (
     <MDBNavbar expand='lg' light className='pr' bgColor='light' fixed>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='/' className='ms-3' id='fon'> Mon cv </MDBNavbarBrand>
+        <MDBNavbarBrand href='/' className='ms-3'> Mon cv </MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
