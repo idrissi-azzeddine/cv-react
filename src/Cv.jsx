@@ -27,7 +27,7 @@ const Cv = () => {
     >
       <Link to={href}>
         <MDBBtn
-          className="m-2 position-absolute top-0 start-0 btn btn-primary pt-2"
+          className="mt-2 position-absolute top-0 start-0 btn btn-primary ms-2 bg-secondary text-light"
           id="print"
           color="light"
         >
